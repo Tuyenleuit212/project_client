@@ -16,8 +16,7 @@ const createSendToken = (user, statusCode, res) => {
         expires: new Date(
             Date.now() + process.env.COOKIE_EXPIRES * 24 * 60 * 60 * 1000
         ),
-        httpOnly: true,
-        domain : 'onrender.com'
+        httpOnly: true
         // secure: true
     };
     // if (process.env.NODE_ENV === 'production') cookieOptions.secure = true;
