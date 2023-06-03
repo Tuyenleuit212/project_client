@@ -11,7 +11,11 @@ const reviewRouter = require('./routes/reviewRoutes')
 const chatRouter = require('./routes/chatRoutes')
 const app = express()
 
-app.use(cors());
+app.use(cors({
+    origin: "https://yourfrontendurl.com",
+    credentials:  true
+}));
+app.set("trust proxy",1);
 app.use(express.static('public/image'));
 
 app.use(cookieParser())
