@@ -17,7 +17,8 @@ app.use(cookieParser())
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 app.use(cors({
-    origin: 'https://myway-shop-app.onrender.com'
+    origin: 'https://myway-shop-app.onrender.com',
+    credentials : true
 }));
 app.use(mongoSanitize());
 app.get('/' , (req,res) => {
