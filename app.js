@@ -11,19 +11,7 @@ const reviewRouter = require('./routes/reviewRoutes')
 const chatRouter = require('./routes/chatRoutes')
 const app = express()
 
-app.use(cors({
-    origin: "https://myway-shop-app.onrender.com"
-}))
-
-app.use(function (req, res, next) {
-    res.header("Access-Control-Allow-Origin", "https://myway-shop-app.onrender.com");
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    res.header("Access-Control-Allow-Credentials", "true");
-    next();
-});
+app.use(cors())
 app.use(express.static('public/image'));
 
 app.use(cookieParser())
