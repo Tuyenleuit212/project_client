@@ -12,7 +12,7 @@ const chatRouter = require('./routes/chatRoutes')
 const app = express()
 
 app.use(cors({
-    origin: "https://yourfrontendurl.com",
+    origin: "https://myway-shop-app.onrender.com",
     credentials:  true
 }));
 app.set("trust proxy",1);
